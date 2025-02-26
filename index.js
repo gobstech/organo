@@ -1,22 +1,11 @@
-import './ListaSuspensa.css';
+import './Time.css';
 
-const ListaSuspensa = (props) => {
-  console.log(props.itens);
-
+const Time = (props) => {
   return (
-    <div className="lista-suspensa">
-      <label>{props.label}</label>
-      <select
-        onChange={(evento) => props.aoAlterado(evento.target.value)}
-        required={props.required}
-        value={props.value}
-      >
-        {props.itens.map((item, index) => {
-          return <option key={index}>{item}</option>;
-        })}
-      </select>
-    </div>
+    <section>
+      <h3>{props.nome}</h3>
+    </section>
   );
 };
 
-export default ListaSuspensa;
+export default Time;
